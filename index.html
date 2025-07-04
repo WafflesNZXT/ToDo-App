@@ -7,16 +7,10 @@
     <title>My Todo</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="manifest" href="manifest.json" />
+    <script src="dexie.js"></script>
+    <script src="index.js" defer></script>
     <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
-    <script>
-// Check that service workers are supported
-if ("serviceWorker" in navigator) {
-  // Use the window load event to keep the page load performant
-window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js");
-  });
-}
-</script>
+    
 </head>
 <body>
  <header>
@@ -35,8 +29,6 @@ window.addEventListener("load", () => {
             </div>
         </section>
     </main>
-
-    <script src="index.js"></script>
 
 </body>
 </html>
